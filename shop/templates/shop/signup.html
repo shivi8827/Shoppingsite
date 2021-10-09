@@ -1,0 +1,50 @@
+{% extends 'shop/basic.html' %}
+{% block title %} Signup {% endblock %}
+{% block body %} 
+
+<div class="container">
+   <div class="p-4 m-4 border rounded">
+    <div>
+        
+        
+            <form action="/shop/signup/" method="POST">
+              {% csrf_token %}
+              {% if error %}
+              <div class="alert alert-danger" role="alert">
+                {{error}}
+              </div>
+              {% endif %}
+                <div class="form-group">
+                    <h4><b>Create An Acount</b></h4>
+                    <label for="name"> First Name</label>
+                    <input  type="text" class="form-control form-control-sm" value="{{values.first_name}}"  id="firstname" name="firstname" placeholder="Enter Your Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="name"> Last Name</label>
+                    <input type="text" class="form-control form-control-sm" id="lastname" value="{{values.last_name}}" name="lastname"   placeholder="Enter Your Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input  type="tel" class="form-control form-control-sm" id="phone" value="{{values.phone}}" name="phone" placeholder="Enter Your Phone Number">
+                  </div>
+                <div class="form-group">
+                  <label for="InputEmail1">Email address</label>
+                  <input type="email" class="form-control form-control-sm " id="InputEmail1" value="{{values.email}}" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+                  
+                </div>
+
+                <div class="form-group">
+                  <label for="InputPassword1">Password</label>
+                  <input type="password" class="form-control form-control-sm" id="InputPassword1" name="password" placeholder="**********">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Create An Acount</button><a class="nav-link" href="/shop/login">Login</a>
+             
+              </form>
+              
+               
+        
+    </div>
+   </div>
+</div>
+{% endblock %}

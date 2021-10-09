@@ -1,0 +1,66 @@
+{% extends 'shop/basic.html' %}
+{% block title %} Checkout {% endblock %}
+{% block body %} 
+<div class="container">
+<div class="col my-2">
+  <div>
+    <h4>  Item In Your Cart!</h4>
+    
+      <ul class="list-group" id="items">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          A list item
+          <span class="badge bg-primary rounded-pill">14</span>
+        </li>
+        
+       
+      </ul>
+    </div>
+</div>
+
+
+<div class="col my-2">
+<h4>Enter Your Address!</h4>
+<form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputname">Name</label>
+      <input type="name" class="form-control" id="name" placeholder="Enter Your Name">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputEmail">Email</label>
+      <input type="email" class="form-control" id="inputEmail" placeholder="Enter Your Email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Address. 1</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Enter Your Address">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Address. 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Enter Address">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+      <input type="text" class="form-control" id="inputState">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Zip</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+  </div>
+  <div class="form-group ">
+    <label for="inputPhone">Phone Number</label>
+    <input type="tel" class="form-control" id="inputPhone">
+  </div>
+  <button type="submit" class="btn btn-primary">Place Order</button>
+</form>
+</div>
+</div>
+  
+
+{% endblock %}

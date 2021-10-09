@@ -1,0 +1,28 @@
+{% extends 'shop/basic.html' %}
+{% block title %}  Tracker Page {% endblock %}
+{% block body %}
+<div class="container">
+<div class="col my-4">
+    <h4>Enter Your Order Id And Email Address</h4>
+   
+    <form method="post" action="/shop/chechout/" > {% csrf_token %}
+        
+        <div class="form-row">
+            <div class="form-group col-md-5">
+                <label for="inputname">Order Id</label> 
+                <input type="text" class="form-control" id="Orderid" name="Orderid" placeholder="Order Id">
+            </div>
+            <div class="form-group col-md-5">
+                <label for="inputemail">Email</label> 
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name">
+            </div>
+        </div>
+            <button type="submit" class="btn btn-primary"> Tracker</button><br>
+        
+    </div>
+</div>
+       
+        
+
+ {% endblock %}
+{% block css %} css of about {% endblock %}
