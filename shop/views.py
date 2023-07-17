@@ -170,3 +170,4 @@ def login(request):
 def logout(request):
      return render(request, 'shop/logout.html')  
 
+4
